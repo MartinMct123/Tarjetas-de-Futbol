@@ -76,7 +76,7 @@ imagenOCR.onload = function(){
 
 async function cargarTemplate() {
 
-    const respuesta = await fetch("../toPdf/pdf.html");
+    const respuesta = await fetch("toPdf/pdf.html");
 
     const html = await respuesta.text();
 
