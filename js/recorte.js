@@ -76,6 +76,8 @@ function recortarDNI(dni) {
     }
 
 
+    console.log("esta es la ultima version");
+    
 
     // ==============================
     // HACER RECORTES
