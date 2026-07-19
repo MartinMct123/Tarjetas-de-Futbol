@@ -2,7 +2,7 @@
 <html>
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
-<link rel='stylesheet' type='text/css' media='screen' href='pdf.css'>
+<link rel='stylesheet' type='text/css' media='screen' href='../toPdf/pdf.css'>
 
 </head>
 
@@ -10,7 +10,7 @@
 
 <template id="tarjetaTemplate">
 
-    <link rel='stylesheet' type='text/css' media='screen' href='pdf.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../toPdf/pdf.css'>
 
     <div id="hoja">
 
@@ -18,7 +18,7 @@
     <div class="tarjeta" id="frente">
 
         <img id="fotoTarjeta" class="fotoTarjeta">
-        <img src="tarjetaFrente.png" alt="" class="fondo">
+        <img src="../toPdf/tarjetaFrente.png" alt="" class="fondo">
 
         <div class="datos">
             <p id="categoria"></p>
@@ -36,7 +36,7 @@
 
     <!-- Detras -->
     <div class="tarjeta" id="dorso">
-        <img src="tarjetaDetras.png" alt="" class="tarjetaDetras">
+        <img src="../toPdf/tarjetaDetras.png" alt="" class="tarjetaDetras">
     </div>
 
     </div>
@@ -46,7 +46,7 @@
 
 <script src="pdf.js"></script>
 
-<script src="html2pdf.bundle.min.js"></script>
+<script src="../toPdf/html2pdf.bundle.min.js"></script>
 
 </body>
 </html>
