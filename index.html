@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Prueba</title>
     <script async src="libs/opencv.js"></script>
+    <script src="libs/tesseract.min.js"></script>
+    
+    <script src="libs/html2pdf.bundle.min.js"></script>
 </head>
 <body>
     <div class="base">
@@ -64,24 +67,14 @@
     
         </form>
     </div>
-
-
-    <script>
-        cv['onRuntimeInitialized'] = () => {
-            console.log("OpenCV listo");
-        };
-    </script>
     
-    <script src="libs/tesseract.min.js"></script>
+    
 
     <script src="js/recorte.js"></script>
 
     <script src="js/leerDNI.js"></script>
 
     <script src="js/leerOCR.js"></script>
-
-    
-    <script src="libs/html2pdf.bundle.min.js"></script>
 
     <script src="js/pdf.js"></script>
 
