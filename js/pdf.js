@@ -11,7 +11,6 @@ async function generarPDF(fragment) {
     hoja.style.top = "0";
     hoja.style.opacity = "0";
     hoja.style.pointerEvents = "none";
-console.log(document.currentScript.src);
 
     document.body.appendChild(hoja);
 
