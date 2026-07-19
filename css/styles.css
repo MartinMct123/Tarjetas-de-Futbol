@@ -1,0 +1,109 @@
+@font-face {
+    font-family: "Roboto_Slab";
+    src: url("../fonts/RobotoSlab-VariableFont_wght.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.base {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#formPersona {
+    width: 80%;
+    height: 90%;
+
+    background-color: #423e3e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: #ffffff;
+    font-family: "Roboto_Slab";
+    font-size: 1.2rem;
+}
+
+#logo {
+    width: 20%;
+}
+
+.ingresarDatos {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    border: none;
+    outline: none;
+    background: #ffffff;
+
+    margin: 0;
+    padding: 0;
+
+    font: inherit;
+    color: #000;
+    width: 50vw;
+}
+
+#foto {
+    display: none;
+}
+
+
+.botonFoto {
+
+    display: inline-block;
+
+    padding: 10px 20px;
+    margin-bottom: 5%;
+
+    background: #3d2828;
+
+    color: white;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+
+.botonFoto:hover {
+
+    background: #000;
+
+}
+
+#imagenDNI {
+    display: none;
+}
+
+#guardar {
+    color: #ffffff;
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    background: #3d2828;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+#guardar:hover {
+    background-color: #000;
+}

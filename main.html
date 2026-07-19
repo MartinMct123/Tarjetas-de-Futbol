@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Prueba</title>
+</head>
+<body>
+    <div class="base">
+        <form id="formPersona">
+            
+            <img src="../images/Logo.png" alt="Logo" id="logo">
+    
+            <label for="foto" class="botonFoto">Subir DNI </label>
+    
+            <input 
+                type="file" 
+                id="foto"
+                accept="image/jpeg,image/png"
+            >
+    
+            <img id="imagenDNI"">
+    
+            <label>Fecha de nacimiento: </label>
+            <input 
+                type="date" 
+                id="inputNacimiento"
+                class="ingresarDatos"
+                placeholder="dd/mm/aaaa"
+            >
+    
+            <label>Categoria: </label>
+            <input 
+                type="text" 
+                id="inputCategoria"
+                class="ingresarDatos"
+                placeholder="1' ASCENSO"
+            >
+    
+            <label>Legajo: </label>
+            <input 
+                type="text"
+                id="inputLegajo"
+                class="ingresarDatos"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                maxlength="4"
+                placeholder="0001"
+            >
+    
+            <label>Club: </label>
+            <input 
+                type="text" 
+                id="inputClub"
+                class="ingresarDatos"
+                placeholder="Callejas"
+            >
+        
+            <button type="button" id="guardar">
+                Guardar datos
+            </button>
+    
+        </form>
+    </div>
+
+
+    <script async src="../libraries/opencv.js"></script>
+    
+    <script src="../libraries/tesseract.min.js"></script>
+
+    <script src="../js/recorte.js"></script>
+
+    <script src="../js/leerDNI.js"></script>
+
+    <script src="../js/leerOCR.js"></script>
+
+    
+    <script src="../toPdf/html2pdf.bundle.min.js"></script>
+
+    <script src="../toPdf/pdf.js"></script>
+
+    <script src="../js/control.js"></script>
+    
+</body>
+</html>

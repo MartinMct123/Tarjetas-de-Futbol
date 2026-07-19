@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+<link rel='stylesheet' type='text/css' media='screen' href='../toPdf/pdf.css'>
+
+</head>
+
+<body>
+
+<template id="tarjetaTemplate">
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../toPdf/pdf.css'>
+
+    <div id="hoja">
+
+    <!-- Frente -->
+    <div class="tarjeta" id="frente">
+
+        <img id="fotoTarjeta" class="fotoTarjeta">
+        <img src="../toPdf/tarjetaFrente.png" alt="" class="fondo">
+
+        <div class="datos">
+            <p id="categoria"></p>
+            <p id="legajo"></p>
+
+            <p id="nacionalidad"></p>
+            <p id="nombre"></p>
+            <p id="apellido"></p>
+            <p id="fecha"></p>
+            <p id="dni"></p>
+            <p id="club"></p>
+        </div>
+
+    </div>
+
+    <!-- Detras -->
+    <div class="tarjeta" id="dorso">
+        <img src="../toPdf/tarjetaDetras.png" alt="" class="tarjetaDetras">
+    </div>
+
+    </div>
+
+</template>
+
+
+<script src="pdf.js"></script>
+
+<script src="../toPdf/html2pdf.bundle.min.js"></script>
+
+</body>
+</html>

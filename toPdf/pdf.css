@@ -1,0 +1,119 @@
+template{
+    background:#fff;
+}
+
+#hoja{
+    width:210mm;
+    background:white;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    
+    padding-top:40mm;
+    gap:20mm;
+}
+
+.tarjeta{
+    width:85.60mm;
+    height:53.98mm;
+
+    position:relative;
+    overflow:hidden;
+
+    background:white;
+    box-sizing:border-box;
+}
+
+/* Frente */
+
+.fondo{
+    position:absolute;
+    width:85.60mm;
+    height:53.98mm;
+}
+
+.fotoTarjeta{
+    position:absolute;
+    left:13mm;
+    top:15mm;
+
+    width:22mm;
+    height:27mm;
+    object-fit:cover;
+
+}
+
+
+.datos{
+    font-size:2.5mm;
+    font-family: "Bahnschrift";
+    font-weight: 600;
+}
+
+
+#categoria {
+    position: absolute;
+    left: 12.5mm;
+    top: 8.7mm;
+    
+    font-size: 3.5mm;
+    font-family: "Roboto Slab", serif;
+    font-weight: 900;
+}
+
+#legajo {
+    position: absolute;
+    left: 63.5mm;
+    top: 8.3mm;
+    font-size: 2.8mm;
+    
+}
+
+
+#nacionalidad {
+    position: absolute;
+    left: 50.5mm;
+    top: 13.3mm;
+}
+
+#nombre {
+    position: absolute;
+    left: 46mm;
+    top: 16.6mm;
+}
+
+#apellido {
+    position: absolute;
+    left: 47mm;
+    top: 20mm;
+}
+
+#fecha {
+    position: absolute;
+    left: 48mm;
+    top: 23.4mm;
+}
+
+#dni {
+    position: absolute;
+    left: 41.6mm;
+    top: 26.6mm;
+}
+
+#club {
+    position: absolute;
+    left: 43.5mm;
+    top: 30.1mm;
+}
+
+/* Dorso */
+
+
+.tarjetaDetras{
+    position:absolute;
+
+    width:85.60mm;
+
+    height:53.98mm;
+}
