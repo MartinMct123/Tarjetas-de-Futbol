@@ -66,6 +66,12 @@
 
 
     <script async src="libs/opencv.js"></script>
+
+    <script>
+        cv['onRuntimeInitialized'] = () => {
+            console.log("OpenCV listo");
+        };
+    </script>
     
     <script src="libs/tesseract.min.js"></script>
 
