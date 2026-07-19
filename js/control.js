@@ -48,7 +48,6 @@ botonGuardar.onclick = async function(){
     persona.categoria = document.getElementById("inputCategoria").value;
     persona.legajo = document.getElementById("inputLegajo").value;
     persona.club = document.getElementById("inputClub").value;
-    console.log(persona);
     const template = await cargarTemplate();
     const fragment = template.content.cloneNode(true);
     generarPDF(fragment);
