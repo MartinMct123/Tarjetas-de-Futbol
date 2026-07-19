@@ -107,3 +107,9 @@ body {
 #guardar:hover {
     background-color: #000;
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+}
