@@ -25,7 +25,7 @@ async function generarPDF(fragment) {
     hoja.querySelector("#dni").textContent = persona.dni;
     hoja.querySelector("#club").textContent = persona.club;
 
-    hoja.querySelector("#fotoTarjeta").src = persona.foto;
+    hoja.querySelector("#fotoTarjetaDNI").src = persona.foto;
 
 
     // Esperar imágenes

@@ -13,10 +13,9 @@ body {
 
 .base {
     width: 100vw;
-    height: 100vh;
     margin: 0;
+    padding: 3vw;
     background-color: #000;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,8 +24,7 @@ body {
 
 #formPersona {
     width: 80%;
-    height: 90%;
-
+    padding-bottom: 3vh;
     background-color: #423e3e;
     display: flex;
     flex-direction: column;
@@ -91,6 +89,11 @@ body {
     display: none;
 }
 
+#fotoTarjeta {
+    width: 30%;
+    margin-bottom: 3vh;
+}
+
 #guardar {
     color: #ffffff;
     display: inline-block;
@@ -112,4 +115,80 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0;
     width: 100%;
     position: absolute;
+}
+
+
+
+#modalRecorte{
+
+    position:fixed;
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,.75);
+
+    z-index:9999;
+
+}
+
+#ventanaRecorte{
+
+    width:min(90vw,500px);
+    height:min(90vh,700px);
+
+    display:flex;
+    flex-direction:column;
+
+    background:#fff;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    box-sizing:border-box;
+
+}
+
+#ventanaRecorte h2{
+
+    margin:0 0 15px;
+
+    text-align:center;
+
+}
+
+#botonesRecorte{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:10px;
+
+    margin-top:20px;
+
+}
+
+#contenedorCropper{
+
+    flex:1;
+
+    overflow:hidden;
+
+    min-height:0;
+
+    position:relative;
+
+}
+
+#imagenRecortar{
+
+    display:block;
+    width:100%;
+    max-width: 100%;
+
 }

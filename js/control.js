@@ -44,33 +44,21 @@ botonGuardar.onclick = async function(){
 
     const fechaFormateada = `${dia}/${mes}/${anio}`;
 
+    persona.nacionalidad = document.getElementById("inputNacionalidad").value;
+    persona.nombre = document.getElementById("inputNombre").value;
+    persona.apellido = document.getElementById("inputApellido").value;
     persona.nacimiento = fechaFormateada;
+    persona.dni = document.getElementById("inputDNI").value;
     persona.categoria = document.getElementById("inputCategoria").value;
     persona.legajo = document.getElementById("inputLegajo").value;
     persona.club = document.getElementById("inputClub").value;
+    persona.foto = document.getElementById("fotoTarjeta").src
+
+
     const template = await cargarTemplate();
     const fragment = template.content.cloneNode(true);
     generarPDF(fragment);
 
-};
-
-
-
-const archivo = document.getElementById("foto");
-const imagenOCR = document.getElementById("imagenDNI");
-
-archivo.onchange = function(){
-
-    const file = this.files[0];
-
-    if(!file) return;
-
-    imagenOCR.src = URL.createObjectURL(file);
-
-};
-
-imagenOCR.onload = function(){
-    escanearDNI(imagenOCR);
 };
 
 async function cargarTemplate() {
@@ -84,5 +72,103 @@ async function cargarTemplate() {
     const doc = parser.parseFromString(html, "text/html");
 
     return doc.getElementById("tarjetaTemplate");
+
+}
+
+
+let cropper = null;
+
+const inputFoto = document.getElementById("foto");
+const modal = document.getElementById("modalRecorte");
+const imagen = document.getElementById("imagenRecortar");
+
+inputFoto.onchange = function(e){
+
+    const archivo = e.target.files[0];
+
+    if(!archivo){
+        return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = function(){
+
+        imagen.src = reader.result;
+
+    };
+
+    reader.readAsDataURL(archivo);
+
+}
+
+imagen.onload = function(){
+
+    modal.style.display = "flex";
+
+    requestAnimationFrame(() => {
+
+        if(cropper){
+
+            cropper.destroy();
+
+        }
+
+        cropper = new Cropper(imagen,{
+
+            aspectRatio:383/451,
+
+            viewMode:2,
+
+            autoCropArea:1,
+
+            movable:true,
+
+            zoomable:true,
+
+            rotatable:false,
+
+            scalable:false,
+
+            responsive:true,
+
+            background:false
+
+        });
+
+    });
+
+}
+
+document.getElementById("aceptarRecorte").onclick = function(){
+
+    const canvas = cropper.getCroppedCanvas({
+
+        width:383,
+        height:451
+
+    });
+
+    persona.foto = canvas.toDataURL("image/png");
+
+    document.getElementById("fotoTarjeta").src = persona.foto;
+
+    cropper.destroy();
+    cropper = null;
+
+    modal.style.display = "none";
+
+}
+document.getElementById("cancelarRecorte").onclick = function(){
+
+    if(cropper){
+
+        cropper.destroy();
+
+        cropper = null;
+
+    }
+
+    modal.style.display = "none";
 
 }

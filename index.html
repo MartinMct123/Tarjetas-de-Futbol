@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <title>Prueba</title>
-    <script async src="libs/opencv.js"></script>
-    <script src="libs/tesseract.min.js"></script>
     
     <script src="libs/html2pdf.bundle.min.js"></script>
+
+    <<script src="libs/cropper.min.js"></script>
+
 </head>
 <body>
     <div class="base">
@@ -23,8 +24,32 @@
                 id="foto"
                 accept="image/*"
             >
-    
-            <img id="imagenDNI"">
+
+            <img id="fotoTarjeta">
+
+            <label>Nacionalidad: </label>
+            <input 
+                type="text" 
+                id="inputNacionalidad"
+                class="ingresarDatos"
+                placeholder="Argentina"
+            >
+
+            <label>Nombre: </label>
+            <input 
+                type="text" 
+                id="inputNombre"
+                class="ingresarDatos"
+                placeholder="Nombre"
+            >
+
+            <label>Apellidos: </label>
+            <input 
+                type="text" 
+                id="inputApellido"
+                class="ingresarDatos"
+                placeholder="Apellidos"
+            >
     
             <label>Fecha de nacimiento: </label>
             <input 
@@ -32,6 +57,14 @@
                 id="inputNacimiento"
                 class="ingresarDatos"
                 placeholder="dd/mm/aaaa"
+            >
+
+            <label>DNI: </label>
+            <input 
+                type="text" 
+                id="inputDNI"
+                class="ingresarDatos"
+                placeholder="12.345.678"
             >
     
             <label>Categoria: </label>
@@ -67,14 +100,34 @@
     
         </form>
     </div>
-    
-    
 
-    <script src="js/recorte.js"></script>
+    <div id="modalRecorte">
 
-    <script src="js/leerDNI.js"></script>
+        <div id="ventanaRecorte">
 
-    <script src="js/leerOCR.js"></script>
+            <h2>Recortar fotografía</h2>
+
+            <div id="contenedorCropper">
+
+                <img id="imagenRecortar">
+
+            </div>
+
+            <div id="botonesRecorte">
+
+                <button id="cancelarRecorte">
+                    Cancelar
+                </button>
+
+                <button id="aceptarRecorte">
+                    Aceptar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
 
     <script src="js/pdf.js"></script>
 

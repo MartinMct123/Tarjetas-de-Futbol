@@ -33,14 +33,12 @@ template{
     height:53.98mm;
 }
 
-.fotoTarjeta{
+.fotoTarjetaDNI{
     position:absolute;
     left:13mm;
-    top:15mm;
+    top:16mm;
 
-    width:22mm;
-    height:27mm;
-    object-fit:cover;
+    width:21.5mm;
 
 }
 
