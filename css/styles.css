@@ -29,7 +29,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1.2rem;
     color: #ffffff;
     font-family: "Roboto_Slab";
     font-size: 1.2rem;
@@ -68,7 +68,7 @@ body {
     padding: 10px 20px;
     margin-bottom: 5%;
 
-    background: #3d2828;
+    background: #161616;
 
     color: white;
 
@@ -81,7 +81,7 @@ body {
 
 .botonFoto:hover {
 
-    background: #000;
+    background: #2b2929;
 
 }
 
@@ -99,8 +99,9 @@ body {
     display: inline-block;
 
     padding: 10px 20px;
+    margin-top: 3vh;
 
-    background: #3d2828;
+    background: #161616;
 
     border-radius: 8px;
 
@@ -108,7 +109,7 @@ body {
 }
 
 #guardar:hover {
-    background-color: #000;
+    background-color: #2b2929;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -143,7 +144,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     display:flex;
     flex-direction:column;
 
-    background:#fff;
+    background:#ffffff;
 
     border-radius:10px;
 
@@ -156,6 +157,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #ventanaRecorte h2{
 
     margin:0 0 15px;
+    color: #000;
 
     text-align:center;
 
@@ -171,6 +173,23 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
     margin-top:20px;
 
+}
+
+.botonRecorte {
+    color: #ffffff;
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    background: #161616;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.botonRecorte:hover {
+    background-color: #423e3e;
 }
 
 #contenedorCropper{
